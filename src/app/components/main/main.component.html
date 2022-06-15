@@ -1,3 +1,14 @@
-<p><strong>Hello World!</strong></p>
+<p id="helloworld"><strong>Hello World!</strong></p>
 <p id="name">My name is {{ firstName }}</p>
+<div id="showLastName">
+    <p>Show Last Name?</p>
+    <button id="true" (click)="isShown()">Yes</button>
+    <button id="false" (click)="isNotShown()">No</button>
+</div>
+<div *ngIf="show">
+    <p #show id="lastName">DiMarcello</p>
+</div>
+<div *ngIf="!show">
+    <p #!show></p>
+</div>
 

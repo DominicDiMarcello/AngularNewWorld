@@ -1,4 +1,4 @@
-p {
+#helloworld, #name, #lastName {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
     'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
@@ -14,4 +14,51 @@ p {
 
 #name {
     -webkit-text-stroke-color: blue;
+}
+
+#lastName {
+    -webkit-text-stroke-color: lime;
+}
+
+#showLastName {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: center;
+    font-size: 250%;
+    border: 1px solid hotpink;
+}
+
+#showLastName p {
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 1px;
+}
+
+#true, #false {
+    display: flex;
+    margin: 1%;
+    -webkit-text-stroke-color: black;
+    font-size: 75%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#true {
+    margin-left: 5%;
+    border: 1px solid green;
+    background-color: green;
+    color: white;
+}
+
+#false {
+    border: 1px solid red;
+    background-color: red;
+    color: white;
+}
+
+#true:hover, #false:hover {
+    border: 1px solid black;
+    background-color: black;
 }
