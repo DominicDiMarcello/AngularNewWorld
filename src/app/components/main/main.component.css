@@ -1,0 +1,17 @@
+p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: center;
+    border: 1px solid hotpink;
+    -webkit-text-stroke-color: red;
+    -webkit-text-stroke-width: 2px;
+    padding: 50px;
+    font-size: 500%;
+}
+
+#name {
+    -webkit-text-stroke-color: blue;
+}
