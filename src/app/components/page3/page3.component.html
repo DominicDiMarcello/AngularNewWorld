@@ -15,7 +15,7 @@
                 <td><img src='{{ "assets/images/" + movie.imageName + ".jpg" }}'></td>
                 <td>{{movie.title}}</td>
                 <td>{{movie.director}}</td>
-                <td>{{movie.releaseDate}}</td>
+                <td>{{movie.releaseDate | date: 'mediumDate'}}</td>
             </tr>
         </tbody>
     </table>

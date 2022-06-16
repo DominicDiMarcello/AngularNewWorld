@@ -9,11 +9,16 @@ import { Component, OnInit } from '@angular/core';
 export class Page3Component implements OnInit {
   title: string = "Favorite Movies";
 
+  insidiousReleaseDate = new Date(2011, 3, 1);
+  zombielandReleaseDate = new Date(2009, 9, 2);
+  sithRevengeReleaseDate = new Date(2005, 4, 5);
+  kingGojiraReleaseDate = new Date(2019, 4, 31);
+
   movies: Movie[] = [
-    {imageName: 'insidious', title: 'Insidious', director: 'James Wan', releaseDate: 'April 1, 2011'},
-    {imageName: 'zombieland', title: 'ZombieLand', director: 'Ruben Fleisher', releaseDate: 'October 2, 2009'},
-    {imageName: 'starwarsep3', title: 'Star Wars: Episode III - Revenge of the Sith', director: 'George Lucas', releaseDate: 'May 9, 2005'},
-    {imageName: 'godzillaking', title: 'Godzilla: King of the Monsters', director: 'Michael Dougherty', releaseDate: 'May 31, 2019'}
+    {imageName: 'insidious', title: 'Insidious', director: 'James Wan', releaseDate: this.insidiousReleaseDate},
+    {imageName: 'zombieland', title: 'ZombieLand', director: 'Ruben Fleisher', releaseDate: this.zombielandReleaseDate},
+    {imageName: 'starwarsep3', title: 'Star Wars: Episode III - Revenge of the Sith', director: 'George Lucas', releaseDate: this.sithRevengeReleaseDate},
+    {imageName: 'godzillaking', title: 'Godzilla: King of the Monsters', director: 'Michael Dougherty', releaseDate: this.kingGojiraReleaseDate}
   ]
 
   constructor() { }
@@ -27,5 +32,5 @@ class Movie {
   imageName!: string;
   title!: string;
   director!: string;
-  releaseDate!: string;
+  releaseDate!: Date;
 }
