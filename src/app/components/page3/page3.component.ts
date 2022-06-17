@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { createAbstractBuilder } from 'typescript';
 
 
 @Component({
@@ -7,7 +8,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page3.component.css']
 })
 export class Page3Component implements OnInit {
-  title: string = "Favorite Movies";
+  pageTitle: string = "Favorite Movies";
+  addNewMovie: boolean = false;
+  addOrCancel!: string;
+  newTitle!: string;
+  newDirector!: string;
+  newReleaseDate!: Date;
+  newImage!: string;
+
 
   insidiousReleaseDate = new Date(2011, 3, 1);
   zombielandReleaseDate = new Date(2009, 9, 2);
@@ -25,7 +33,23 @@ export class Page3Component implements OnInit {
 
   ngOnInit(): void {
   }
-  
+
+  onAddMovie(): void {
+    this.addNewMovie = !this.addNewMovie;
+  }
+
+  addMovieToList(): void {
+    const newMovie = new Movie;
+    newMovie.title = this.newTitle;
+    newMovie.director = this.newDirector;
+    newMovie.releaseDate = this.newReleaseDate;
+    this.movies.push(newMovie);
+    console.log(newMovie);
+  }
+
+  onFileSelected(event: Event) {
+    console.log(event)
+  }
 }
 
 class Movie {

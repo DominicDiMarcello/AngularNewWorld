@@ -33,9 +33,43 @@ img {
     height: 190px;
     padding: 0;
 }
-
 td img {
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+#addNew {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    margin: 2%;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+}
+#addNew button {
+    font-size: 120%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 
+    'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    cursor: pointer;
+}
+#newFavMovie {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    float: left;
+    font-size: 120%;
+}
+#newFavMovie label {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+#newFavMovie input[type="text"] {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+#newFavMovie input[type="date"] {
+    margin-right: 5px;
+    margin-left: 5px;
 }

@@ -1,4 +1,4 @@
-<h1>{{ title }}</h1>
+<h1>{{ pageTitle }}</h1>
 
 <div class="table-responsive">
     <table>
@@ -19,4 +19,21 @@
             </tr>
         </tbody>
     </table>
+</div>
+
+<div id="addNew">
+    <button (click)="onAddMovie()">{{ addNewMovie == false ? 'Add New Movie' : 'Cancel' }}</button>
+</div>
+<br>
+<div *ngIf="addNewMovie" id="newFavMovie">
+    <label for="imageUpload">Upload Movie Image</label>
+    <input id="imageUpload" type="file" (change)="onFileSelected($event)">
+
+    <input [(ngModel)]="newTitle" type="text" name="title" placeholder="Movie Title">
+
+    <input [(ngModel)]="newDirector" type="text" name="director" placeholder="Director Name">
+
+    <input [(ngModel)]="newReleaseDate" type="date" name="releaseDate" placeholder="Release Date">
+
+    <button type="submit" (click)="addMovieToList()">Submit</button>
 </div>
